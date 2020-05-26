@@ -34,6 +34,22 @@
 					<!-- 検索ワード入力ボックス -->
 					<input type="text" name="keyword" value="${search}" placeholder="検索キーワードを入力" />
 					<!-- 検索ボタン -->
+					
+					<p>
+					ジャンルを選択してください
+					</p>
+					<select name="genre">
+					<option value=" " selected>選択してください</option>
+					<option value="G004">和食</option>
+					<option value="G005">洋食</option>
+					<option value="G006">イタリアン・フレンチ</option>
+					<option value="G007">中華</option>
+					<option value="G017">韓国料理</option>
+					<option value="G009">アジア・エスニック料理</option>
+					<option value="G001">居酒屋</option>
+					<option value="G002">ダイニングバー・バル</option>
+					<option value="G012">バー・カクテル</option>
+					</select>
 					<input name="action" type="submit" value="検索" />
 				</form>
 			</div>

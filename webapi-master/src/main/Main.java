@@ -87,11 +87,14 @@ public class Main extends HttpServlet {
 			
 			// 検索キーワード
 			String prmKeyword = request.getParameter("keyword");
+			String prmGenre = request.getParameter("genre");
+			System.out.println(prmGenre);
 			// リクエストに検索キーワードを設定
 			request.setAttribute("search", prmKeyword);
-
+			//request.setAttribute("")
 			// 店舗リストを新規取得
-			ArrayList<Shop> shopList = ShopAPI.keywordSearch(prmKeyword);
+			ArrayList<Shop> shopList = ShopAPI.keywordSearch(prmKeyword, prmGenre);
+
 			if(shopList != null) {
 				// 店舗リスト内の各店舗クラスにお気に入りフラグを設定
 				shopList.forEach(x -> x.setFavorite(favoriteShopList.contains(x.getId())));
