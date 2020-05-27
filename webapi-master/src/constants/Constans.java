@@ -11,6 +11,7 @@ public final class Constans {
 	// APIキーワード検索パラメータ
 	public static final String SEARCH_PARAM = "&keyword=%s";
 	public static final String SEARCH_GENRE = "&genre=%s"; 
+	public static final String SEARCH_ORDER = "&order=%s"; 
 	// API店舗指定パラメータ
 	public static final String SELECT_SHOP_PARAM = "&id=%s";
 	

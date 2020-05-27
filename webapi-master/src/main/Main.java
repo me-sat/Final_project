@@ -86,17 +86,18 @@ public class Main extends HttpServlet {
 			// 検索ボタンからのPOSTの場合
 			
 			// 検索キーワード
-			String prmKeyword = request.getParameter("keyword");
-			String prmGenre = request.getParameter("genre");
-			System.out.println(prmGenre);
+			 String prmKeyword = request.getParameter("keyword");
+			 String prmGenre = request.getParameter("genre");
+			 String prmOrder = request.getParameter("order");
+			 System.out.println(prmKeyword);
 			// リクエストに検索キーワードを設定
-			request.setAttribute("search", prmKeyword);
-			//request.setAttribute("")
+			 request.setAttribute("search", prmKeyword);
+			 //request.setAttribute("")
 			// 店舗リストを新規取得
-			ArrayList<Shop> shopList = ShopAPI.keywordSearch(prmKeyword, prmGenre);
+			 ArrayList<Shop> shopList = ShopAPI.keywordSearch(prmKeyword, prmGenre,prmOrder);
 
-			if(shopList != null) {
-				// 店舗リスト内の各店舗クラスにお気に入りフラグを設定
+			 if(shopList != null) {
+				 // 店舗リスト内の各店舗クラスにお気に入りフラグを設定
 				shopList.forEach(x -> x.setFavorite(favoriteShopList.contains(x.getId())));
 				// 検索した店舗のリストをリクエストへ設定
 				request.setAttribute("shopList", shopList);

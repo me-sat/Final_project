@@ -49,9 +49,15 @@
 					<option value="G001">居酒屋</option>
 					<option value="G002">ダイニングバー・バル</option>
 					<option value="G012">バー・カクテル</option>
+					</select>	<span>ソート</span>
+					<select name="order">
+						<option value="4">おすすめ順</option>
+						<option value="1">かな順</option>
+						<option value="2">ジャンル順</option>
 					</select>
 					<input name="action" type="submit" value="検索" />
 				</form>
+				
 			</div>
 		</header>
 		<!-- ここから検索結果の表示 -->
