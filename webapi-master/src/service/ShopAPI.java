@@ -88,15 +88,20 @@ public class ShopAPI {
 	 * @return 検索パラメータを含めたAPIのURL文字列
 	 * @throws UnsupportedEncodingException
 	 */
-	public static String getSearchUrl(String keyword) throws UnsupportedEncodingException {
+	public static String getSearchUrl(String keyword,String genre,String order) throws UnsupportedEncodingException {
 		// 検索キーワードの全角スペースはAPI側で無視されるので、半角スペースへ置き換え
 		String reqKeyword = keyword.replaceAll("　", " ");
 		// 検索キーワードをURLエンコード
 		String encoded = URLEncoder.encode(reqKeyword, "UTF-8");
 		// APIへPOSTするパラメータを生成
 		String param = String.format(Constans.SEARCH_PARAM, encoded);
+		
+		String genreParam = String.format(Constans.SEARCH_GENRE, genre);
+		
+		String orderParam = String.format(Constans.SEARCH_ORDER, order);
+
 		// APIのURLを返す
-		return String.format(Constans.BASE_API_URL, param);
+		return String.format(Constans.BASE_API_URL, param) + genreParam + orderParam;
 	}
 	
 	/**
@@ -126,11 +131,11 @@ public class ShopAPI {
 	 * @throws SAXException 
 	 * @throws ParserConfigurationException 
 	 */
-	public static ArrayList<Shop> keywordSearch(String keyword) throws UnsupportedEncodingException, IOException {
+	public static ArrayList<Shop> keywordSearch(String keyword,String genre,String order) throws UnsupportedEncodingException, IOException {
 		ArrayList<Shop> result = null;
 		
 		try {
-			result = getShopList(getSearchUrl(keyword));
+			result = getShopList(getSearchUrl(keyword,genre,order));
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
