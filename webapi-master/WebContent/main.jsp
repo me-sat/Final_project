@@ -7,10 +7,11 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/base_style.css">
 		<link rel="stylesheet" href="css/main.css">
-		<title>WebAPI</title>
+		<title>スガサーチ</title>
 	</head>
 	<body>
 		<header>
+		
 			<div>
 				<!-- ヘッダー -->
 				<ul class="menu">
@@ -25,7 +26,7 @@
 			</div>
 			<!-- タイトル -->
 			<h1 class="headline">
-				<a>WebAPI</a>
+				<a>スガサーチ</a>
 			</h1>
 
 			<!-- 検索ボックス -->

@@ -95,6 +95,8 @@ public class Main extends HttpServlet {
 			if(shopList != null) {
 				// 店舗リスト内の各店舗クラスにお気に入りフラグを設定
 				shopList.forEach(x -> x.setFavorite(favoriteShopList.contains(x.getId())));
+				
+				
 				// 検索した店舗のリストをリクエストへ設定
 				request.setAttribute("shopList", shopList);
 				
@@ -110,23 +112,25 @@ public class Main extends HttpServlet {
 		}else if(action.equals("お気に入り")) {
 			// お気に入りボタンからのPOSTの場合
 			
+			response.sendRedirect("List2");
 			// お気に入り店舗の店舗リストを取得
-			ArrayList<Shop> shopList = ShopAPI.shopIdSearch(favoriteShopList);
-			if(shopList != null) {
+			//ArrayList<Shop> shopList = ShopAPI.shopIdSearch(favoriteShopList);
+			//if(shopList != null) {
 				// 店舗リスト内の各店舗クラスにお気に入りフラグを設定
-				shopList.forEach(x -> x.setFavorite(favoriteShopList.contains(x.getId())));
+				//shopList.forEach(x -> x.setFavorite(favoriteShopList.contains(x.getId())));
 				// 検索した店舗のリストをリクエストへ設定
-				request.setAttribute("shopList", shopList);
+				//request.setAttribute("shopList", shopList);
 				
 				// ステータスを表示
-				String status = Constans.STATUS_FAVORITE;
-				request.setAttribute("status", status);
-			}
-			else request.setAttribute("error", Constans.MSG_GET_SHOP_ERROR); // エラーメッセージをリクエストに設定
+				//String status = Constans.STATUS_FAVORITE;
+				//request.setAttribute("status", status);
+			//}
+			//else request.setAttribute("error", Constans.MSG_GET_SHOP_ERROR); // エラーメッセージをリクエストに設定
 			
-			ServletContext context = getServletContext();
-			RequestDispatcher dis = context.getRequestDispatcher("/main.jsp");
-			dis.forward(request, response);
+			//ServletContext context = getServletContext();
+			//RequestDispatcher dis = context.getRequestDispatcher("/main.jsp");
+			//dis.forward(request, response);
 		}
 	}
 }
+

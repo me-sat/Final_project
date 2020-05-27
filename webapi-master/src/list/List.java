@@ -1,3 +1,5 @@
+//注意：このサーブレットは使用していない
+
 package list;
 
 import java.io.IOException;
@@ -30,6 +32,7 @@ public class List extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unchecked")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// セッションを取得
 		HttpSession session = request.getSession();

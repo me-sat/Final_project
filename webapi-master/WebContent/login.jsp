@@ -14,6 +14,7 @@
 		<div class="outer">
 			<div class = "inner">
 				<p class="box-title">WebApi</p>
+				<P>${message}</P>
 				<div class="inputbox">
 					<c:if test="${fn:length(error) > 0}" ><p class="error">${error}</p></c:if>
 					<form action="Login" method="post" class="frm" >

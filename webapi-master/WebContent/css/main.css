@@ -53,12 +53,12 @@ header{
 	padding: 5px 0px 15px 0px;
 	margin: 0 auto;
 	text-align: center;
-  	background-color: #9CCC65;
+  	background-color: #FFD700;
   	color: white;
 }
 .headline{
-	font-size: 64px;
-	font-family: "Gabriola";
+	font-size: 50px;
+	font-family: "Hannotate TC";
 }
 
 input[type="text"], .frm input[type="submit"] {
