@@ -13,16 +13,18 @@
 }
 
 .frm input[type="text"], .frm input[type="password"], .frm input[type="submit"] {
-	width: 300px;
+	width: 95%;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	font-family: 'Segoe Script';
+	margin: 0 auto;
 }
 
 .frm input[type="text"], .frm input[type="password"]{
 	border-radius : 0.5em;          /* 角丸       */
 	height: 30px;
-	border: solid 1px #d4d4d4;
+	border: solid 1px black;
   	transition    : .3s;         /* なめらか変化 */
 }
 .frm input[type="text"]:focus, .frm input[type="password"]:focus {
@@ -37,16 +39,16 @@
   text-align    : center;      /* 文字位置   */
   cursor        : pointer;     /* カーソル   */
   padding       : 12px 12px;   /* 余白       */
-  background    : #8bc34a;     /* 背景色     */
+  background    : #FF3366;     /* 背景色     */
   color         : #ffffff;     /* 文字色     */
   line-height   : 1em;         /* 1行の高さ  */
   transition    : .3s;         /* なめらか変化 */
   box-shadow    : 3px 3px 3px #666666;  /* 影の設定 */
-  border        : 2px solid #8bc34a;    /* 枠の指定 */
+  border        : 2px solid #FF3366;    /* 枠の指定 */
 }
 .frm input[type="submit"]:hover {
   box-shadow    : none;        /* カーソル時の影消去 */
-  color         : #8bc34a;     /* 文字色     */
+  color         : #FF3366;     /* 文字色     */
   background    : #ffffff;     /* 背景色     */
 }
 

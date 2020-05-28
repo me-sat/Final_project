@@ -67,7 +67,7 @@ public class Login extends HttpServlet {
 		if((accountId + passWord).equals("")) {
 			
 			//ログイン不可
-			request.setAttribute("message", "IDとパスワードを入力してください");
+			request.setAttribute("message", "IDとPasswordを入力してください");
 			doGet(request, response);
 			
 		//入力があった場合、ID・パスワードを登録	
@@ -81,7 +81,7 @@ public class Login extends HttpServlet {
 			
 		//入力が間違っていた時
 		}else {
-				request.setAttribute("message", "Idまたはパスワードが違います");
+				request.setAttribute("message", "IdまたはPasswordが違います");
 				doGet(request,response);
 				return;
 			

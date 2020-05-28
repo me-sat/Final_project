@@ -7,14 +7,14 @@
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="css/base_style.css">
 		<link rel="stylesheet" href="css/main.css">
-		<title>WebAPI</title>
+		<title>スガサーチ</title>
 	</head>
 	<body>
 		<header>
 			<div>
 				<!-- ヘッダー -->
 				<ul class="menu">
-					<li>おなかがすきましたね <c:out value="${account}"></c:out> さん</li>
+					<li>お腹がすきましたね <c:out value="${account}"></c:out> さん</li>
 					<li>
 						<form action="List2" method="post">
 							<input name="action" type="submit" value="戻る" />
@@ -26,7 +26,8 @@
 			</div>
 			<!-- タイトル -->
 			<h1 class="headline">
-				<a>スガサーチ</a>
+				<a>Sugasearch</a>
+				<img src="./images/アイコン改2.png">
 			</h1>
 
 			<!-- 検索ボックス -->

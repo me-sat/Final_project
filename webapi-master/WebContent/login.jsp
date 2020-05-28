@@ -11,19 +11,20 @@
 		<title>Login</title>
 		</head>
 	<body>
+
 		<div class="outer">
 			<div class = "inner">
-				<p class="box-title">WebApi</p>
+				<p class="box-title">Sugasearch</p>
 				<P>${message}</P>
 				<div class="inputbox">
 					<c:if test="${fn:length(error) > 0}" ><p class="error">${error}</p></c:if>
 					<form action="Login" method="post" class="frm" >
-						<p>ログインID</p>
+						<p>ID</p>
 						<input type="text" name="loginid" value="${id}">
-						<p>パスワード</p>
+						<p>Password</p>
 						<input type="password" name="password">
 						<br><br>
-						<input type="submit" name="submit" value="ログイン">
+						<input type="submit" name="submit" value="Login">
 					</form>
 				</div>
 			</div>

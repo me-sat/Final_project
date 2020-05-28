@@ -6,6 +6,10 @@
 
 body {
 	background-color: #fafafa;
+	font-family: 'Segoe Script';
+	background-image: url("../images/ドラゴンフルーツ1 (1).png"), url("../images/木目4.jpg");
+	background-color: transparent;
+	
 }
 
 p{
@@ -14,13 +18,14 @@ p{
 
 .box-title{
 	text-align: center;
-	font-size: 30px;
+	font-size: 60px;
+	font-weight: bold;
 }
 
 .inputbox {
 	border: solid 1px #d4d4d4;
 	padding: 10px;
-	background-color: #FFF;
+	background-color: white;
 	border-radius: 0.5em;
 	width: 40em;
 	margin-bottom: 2%;

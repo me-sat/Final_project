@@ -10,9 +10,11 @@
 		<title>スガサーチ</title>
 	</head>
 	<body>
+		<div>
 		<header>
-		
-			<div>
+				
+
+			<div class=header-title>
 				<!-- ヘッダー -->
 				<ul class="menu">
 					<li>ようこそ <c:out value="${account}"></c:out> さん</li>
@@ -26,7 +28,8 @@
 			</div>
 			<!-- タイトル -->
 			<h1 class="headline">
-				<a>スガサーチ</a>
+				<a>Sugasearch</a>
+				<img src="./images/アイコン改2.png">
 			</h1>
 
 			<!-- 検索ボックス -->
@@ -38,6 +41,7 @@
 					<input name="action" type="submit" value="検索" />
 				</form>
 			</div>
+			
 		</header>
 		<!-- ここから検索結果の表示 -->
 		<div class="outer">
@@ -85,6 +89,7 @@
 					</div>
 				</c:forEach>
 			</div>
+		</div>
 		</div>
 	</body>
 </html>

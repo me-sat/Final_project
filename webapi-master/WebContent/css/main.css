@@ -48,23 +48,54 @@ iframe{
 	border: none;
 }
 
+body{
+	
+	background-image: url("../images/ドラゴンフルーツ1 (1).png"), 
+						url("../images/ドラゴンフルーツ1 (1).png"),
+						url("../images/木目4.jpg");
+	
+	background-repeat:
+    repeat-y, /* 最前面の背景レイヤーに対応 */
+	repeat-y,
+	repeat;
+
+ 	background-position:
+    right, /* 最前面の背景レイヤーに対応 */
+	left;
+	
+	background-color: transparent;
+	
+}
 header{
 	width: 100%;
-	padding: 5px 0px 15px 0px;
+	padding: 5px 0px 100px 0px;
 	margin: 0 auto;
 	text-align: center;
-  	background-color: #FFD700;
-  	color: white;
+  	color: black;
+  	
 }
+
+
+
 .headline{
-	font-size: 50px;
-	font-family: "Hannotate TC";
+	font-size: 100px;
+	font-family: 'Segoe Script';
+	width: 50%;
+	margin: 0 auto;
+	
 }
+
+h1 img{
+	width: 10%;
+	height: 10%;
+}
+
 
 input[type="text"], .frm input[type="submit"] {
 	-moz-box-sizing    : border-box;
 	-webkit-box-sizing : border-box;
 	box-sizing         : border-box;
+
 }
 
 input[type="text"]{
@@ -72,11 +103,12 @@ input[type="text"]{
 	width         : 20%; /* 横幅 */
 	height        : 30px;
 	border        : solid 1px #d4d4d4;
-	transition    : .3s;         /* なめらか変化 */
+	transition    : .3s;
+	font-family: 'Hannotate SC';         /* なめらか変化 */
 }
 
 input[type="text"]:focus{
-	border-color  : #8bc34a;
+	border-color  : black;
 	outline       : none;
 }
 
@@ -86,28 +118,29 @@ input[type="submit"] {
 	text-align    : center;      /* 文字位置   */
 	cursor        : pointer;     /* カーソル   */
 	padding       : 6px 15px;   /* 余白       */
-	background    : #8bc34a;     /* 背景色     */
+	background    : #FF3366;     /* 背景色     */
 	color         : #ffffff;     /* 文字色     */
 	line-height   : 1em;         /* 1行の高さ  */
 	transition    : .3s;         /* なめらか変化 */
-	border        : 2px solid white;    /* 枠の指定 */
+	border        : 1px solid #d4d4d4;    /* 枠の指定 */
 	width         : auto; /* 横幅 */
 }
 
 input[type="submit"]:hover {
 	box-shadow    : none;        /* カーソル時の影消去 */
-	color         : #8bc34a;     /* 文字色     */
+	color         : #FF3366;     /* 文字色     */
 	background    : #ffffff;     /* 背景色     */
 }
 
 .frm input[type="submit"]{
 	font-size: 12pt;
+	font-family: 'Hannotate SC';
 }
 
 .status{
-	border-bottom: solid 2px #9CCC65;
+	border-bottom: solid 2px black;
 	margin: 5px 0px 25px 0px;
-	background-color: white;
+	
 	color: black;
 	display: block;
 	min-width: 40em;
@@ -119,7 +152,7 @@ input[type="submit"]:hover {
 .status-color{
 	width: 10px;
 	height: 100%;
-	background-color: #9CCC65;
+	background-color: black;
 	float: left;
 	margin-right: 5px;
 }
