@@ -118,8 +118,30 @@ public class ShopAPI {
 			// 店舗IDをパラメータに追加
 			param.append(String.format(Constans.SELECT_SHOP_PARAM, shopId));
 		}
+		
 		// APIのURLを返す
 		return String.format(Constans.BASE_API_URL, param);
+	}
+	
+	/**
+	 * 店舗検索APIのURLを生成
+	 * @param shopIdList
+	 * @return
+	 * @throws UnsupportedEncodingException
+	 */
+	public static String getSearchShopIdUrl(ArrayList<String> shopIdList, String order) throws UnsupportedEncodingException {
+		// APIへPOSTするパラメータ
+		StringBuilder param = new StringBuilder();
+		
+		for(String shopId : shopIdList) {
+			// 店舗IDをパラメータに追加
+			param.append(String.format(Constans.SELECT_SHOP_PARAM, shopId));
+		}
+		
+		String orderParam = String.format(Constans.SEARCH_ORDER, order);
+		
+		// APIのURLを返す
+		return String.format(Constans.BASE_API_URL, param) + orderParam;
 	}
 	
 	/**
@@ -161,6 +183,28 @@ public class ShopAPI {
 		
 		try {
 			result = getShopList(getSearchShopIdUrl(shopIdList));
+		} catch (IOException | ParserConfigurationException | SAXException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	/**
+	 * 店舗ID検索(ソート用)
+	 * @param favoriteShopList:
+	 * @return
+	 * @throws UnsupportedEncodingException
+	 * @throws IOException
+	 * @throws SAXException 
+	 * @throws ParserConfigurationException 
+	 */
+	public static ArrayList<Shop> shopIdSearch(ArrayList<String> shopIdList, String sortId) throws UnsupportedEncodingException, IOException {
+		ArrayList<Shop> result = null;
+		
+		try {
+			result = getShopList(getSearchShopIdUrl(shopIdList,sortId));
 		} catch (IOException | ParserConfigurationException | SAXException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

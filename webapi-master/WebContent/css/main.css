@@ -75,6 +75,11 @@ header{
   	
 }
 
+.fav-sort{
+	float: right;
+	padding-right: 30%;
+	 
+}
 
 
 .headline{

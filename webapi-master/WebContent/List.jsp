@@ -24,6 +24,7 @@
 					</li>
 				</ul>
 			</div>
+		
 			<!-- タイトル -->
 			<h1 class="headline">
 				<a>Sugasearch</a>
@@ -31,16 +32,20 @@
 			</h1>
 
 			<!-- 検索ボックス -->
-			<div class="search">
-				<form action="List2" method="post" class="frm" >
-					<!-- 検索ワード入力ボックス -->
-					<input type="text" name="keyword" value="${search}" placeholder="検索キーワードを入力" />
-					<!-- 検索ボタン -->
-					<input name="action" type="submit" value="検索" />
-				</form>
-			</div>
+			
+			
 		</header>
 		<!-- ここから検索結果の表示 -->
+		<div class="fav-sort">
+				<form action="List2" method="post">
+					<select name="order">
+						<option value="4">おすすめ順</option>
+						<option value="1">かな順</option>
+						<option value="2">ジャンル順</option>	
+					</select>
+					<input name = "action" type ="submit" value="ソート条件" />
+				</form>
+				</div>
 		<div class="outer">
 			<div class = "inner">
 				<!-- 現在表示されている検索結果のステータス -->

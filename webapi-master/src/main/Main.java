@@ -94,7 +94,7 @@ public class Main extends HttpServlet {
 			 request.setAttribute("search", prmKeyword);
 			 //request.setAttribute("")
 			// 店舗リストを新規取得
-			 ArrayList<Shop> shopList = ShopAPI.keywordSearch(prmKeyword, prmGenre,prmOrder);
+			 ArrayList<Shop> shopList = ShopAPI.keywordSearch(prmKeyword, prmGenre, prmOrder);
 
 			 if(shopList != null) {
 				 // 店舗リスト内の各店舗クラスにお気に入りフラグを設定
