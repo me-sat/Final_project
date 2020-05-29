@@ -72,26 +72,28 @@ public class List2 extends HttpServlet {
 			ArrayList<String> favoriteShopList = (ArrayList<String>)session.getAttribute("favoriteList");
 			
 			
-			if(action.equals("戻る")) {
-				response.sendRedirect("Main");
-			}else if(action.equals("お気に入り")) {
+				if(action.equals("戻る")) {
+					response.sendRedirect("Main");
+				}else if(action.equals("お気に入り")) {
 				
-				doGet(request, response);
+					doGet(request, response);
 			
-			}else if (action.equals("ソート条件")) {
-				ArrayList<Shop> shopList = ShopAPI.shopIdSearch(favoriteShopList, PrmOrder);
-				if(shopList != null) {
-					 //店舗リスト内の各店舗クラスにお気に入りフラグを設定
-					shopList.forEach(x -> x.setFavorite(favoriteShopList.contains(x.getId())));
-					// 検索した店舗のリストをリクエストへ設定
-					request.setAttribute("shopList", shopList);
+				}else if (action.equals("ソート条件")) {
+					ArrayList<Shop> shopList = ShopAPI.shopIdSearch(favoriteShopList, PrmOrder);
+					if(shopList != null) {
+						//店舗リスト内の各店舗クラスにお気に入りフラグを設定
+						shopList.forEach(x -> x.setFavorite(favoriteShopList.contains(x.getId())));
+						// 検索した店舗のリストをリクエストへ設定
+						request.setAttribute("shopList", shopList);
 					
-					// ステータスを表示
-					String status = Constans.STATUS_FAVORITE;//わからん
-					request.setAttribute("status", status);
-				}
-				else request.setAttribute("error", Constans.MSG_GET_SHOP_ERROR); // エラーメッセージをリクエストに設定
-				
+						// ステータスを表示
+						String status = Constans.STATUS_FAVORITE;//わからん
+						request.setAttribute("status", status);
+					}
+					else request.setAttribute("error", Constans.MSG_GET_SHOP_ERROR); // エラーメッセージをリクエストに設定
+
+			
+					
 				ServletContext context = getServletContext();
 				RequestDispatcher dis = context.getRequestDispatcher("/List.jsp");
 				dis.forward(request, response);

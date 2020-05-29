@@ -64,11 +64,19 @@ body{
 	left;
 	
 	background-color: transparent;
-	
 }
+
+.addsearch{
+	margin-top: 20px;
+	font-family: "UD デジタル 教科書体 NP-R","UD Digi Kyokasho NP-R";
+}
+
+   
+   
+  
 header{
 	width: 100%;
-	padding: 5px 0px 100px 0px;
+	padding: 5px 0px 20px 0px;
 	margin: 0 auto;
 	text-align: center;
   	color: black;
@@ -139,7 +147,7 @@ input[type="submit"]:hover {
 
 .frm input[type="submit"]{
 	font-size: 12pt;
-	font-family: 'Hannotate SC';
+	font-family: "UD デジタル 教科書体 NP-R","UD Digi Kyokasho NP-R";
 }
 
 .status{
@@ -171,6 +179,8 @@ input[type="submit"]:hover {
 	list-style: none;
 	height: 0;
 	float: right;
+	padding-top: 20px;
+	font-size: 16px;
 }
 
 .menu li {
